@@ -654,8 +654,9 @@ class FrostedGlass(FloatLayout):
             self.update_effect(type=type)
 
         elif (
-            (isinstance(value, int) or isinstance(value, float))
-            and delta_time >= 0.016 and round(value, 3) != self.last_value
+            (isinstance(value, (int, float)))
+            and delta_time >= 0.016
+            and round(value, 3) != self.last_value
         ):
             self.update_effect(type=type)
             self.last_value = round(value, 3)

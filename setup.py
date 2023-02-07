@@ -1,5 +1,6 @@
 """See README.md for package documentation."""
 
+
 from setuptools import setup, find_namespace_packages
 
 from io import open
@@ -39,19 +40,19 @@ setup(
         'Programming Language :: Python :: 3.8',
     ],
     keywords='Kivy kivy-garden',
-
     packages=find_namespace_packages(include=['kivy_garden.*']),
     install_requires=[],
     extras_require={
-        'dev': ['pytest>=3.6', 'pytest-cov', 'pytest-asyncio',
-                'sphinx_rtd_theme'],
+        'dev': [
+            'pytest>=3.6',
+            'pytest-cov',
+            'pytest-asyncio',
+            'sphinx_rtd_theme',
+        ],
         'ci': ['coveralls', 'pycodestyle'],
     },
     package_data={},
     data_files=[],
     entry_points={},
-    project_urls={
-        'Bug Reports': URL + '/issues',
-        'Source': URL,
-    },
+    project_urls={'Bug Reports': f'{URL}/issues', 'Source': URL},
 )
